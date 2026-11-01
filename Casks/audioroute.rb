@@ -36,7 +36,12 @@ cask "audioroute" do
               "~/Library/LaunchAgents/com.audioroute.daemon.plist",
             ]
 
-  zap delete: "/Library/AudioRoute",
+  zap script: {
+        executable:   "/usr/local/bin/audioroute-uninstall.sh",
+        sudo:         true,
+        must_succeed: false,
+      },
+      delete: "/Library/AudioRoute",
       trash:  [
         "~/Library/Application Support/AudioRoute",
         "~/Library/Caches/com.audioroute.app",
