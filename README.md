@@ -1,25 +1,15 @@
-# Arvital Audio Homebrew tap
+# Arvital Audio Homebrew tap (retired)
 
-[AudioRoute](https://audio-route.com) captures system audio, or chosen apps, into any DAW as a VST3 / AU / AAX plug-in, as a virtual input device, or straight to a WAV file.
-
-## Install
+[AudioRoute](https://audio-route.com) is now in Homebrew's main cask repository, so this tap is no longer needed:
 
 ```sh
-brew install --cask arvital-audio/audioroute/audioroute
+brew install --cask audioroute
 ```
 
-Requires macOS 14.2 or later. AudioRoute keeps itself up to date through its built-in updater.
-
-## Uninstall
+If you installed AudioRoute from this tap, Homebrew moves it to the main repository automatically the next time you run `brew update` (see `tap_migrations.json`). You can then remove the tap:
 
 ```sh
-brew uninstall --cask audioroute
-```
-
-Your recordings in `~/Music/AudioRoute` are left in place. To also remove settings and caches:
-
-```sh
-brew uninstall --zap --cask audioroute
+brew untap arvital-audio/audioroute
 ```
 
 Support: support@audio-route.com
